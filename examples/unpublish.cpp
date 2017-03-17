@@ -1,4 +1,4 @@
-#include <curl/curl.h>
+s#include <curl/curl.h>
 
 #include <url/params.hpp>
 #include <yadisk/client.hpp>
@@ -12,8 +12,20 @@ using std::stringstream;
 
 int main () {
   
-  url::path resource = "/2";
+  url::path resource = "existed_file";
   auto info = client.unpublish(resource);
   auto href = info["href"].as_string();
-  stdout 
+  cout << href << endl;
+  
+  url::path resource = "not_existed_file";
+  auto info = client.unpublish(resource);
+  auto code = info["error"].as_string();
+  cout << code << endl;
+  
+  url::path resource = "existed_dir_no_full";
+  auto info = client.unpublish(resource);
+  auto code = info["error"].as_string();
+  auto href = info["href"].as_string();
+  cout << code << href <<endl;
+  
 }
