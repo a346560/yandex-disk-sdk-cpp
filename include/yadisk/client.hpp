@@ -42,7 +42,13 @@ namespace yadisk
         auto remove(url::path resource, bool permanently, std::list<string> fields = std::list<string>()) -> json;
 
         auto publish(url::path resource) -> json;
-
+//
+        ///
+        /// Delete object in yadisk
+        /// \param[in] url::path
+        /// return code_operation, list
+        /// \include /examples/unpublish.cpp
+        
         auto unpublish(url::path resource) -> json;
 
         auto patch(url::path resource, json meta, std::list<string> fields = std::list<string>()) -> json;
