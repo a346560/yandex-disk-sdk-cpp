@@ -1,12 +1,8 @@
-s#include <curl/curl.h>
-
+#include <curl/curl.h>
 #include <url/params.hpp>
 #include <yadisk/client.hpp>
 #include <boost/algorithm/string/join.hpp>
-
 #include <sstream>
-using std::stringstream;
-
 #include "callbacks.hpp"
 #include "quote.hpp"
 
