@@ -1,10 +1,4 @@
-#include <curl/curl.h>
-#include <url/params.hpp>
 #include <yadisk/client.hpp>
-#include <boost/algorithm/string/join.hpp>
-#include <sstream>
-#include "callbacks.hpp"
-#include "quote.hpp"
 
 int main () {
   
